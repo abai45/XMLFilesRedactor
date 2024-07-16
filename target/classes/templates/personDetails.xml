@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+    <person th:each="person : ${personEntities}">
+        <gender th:if="${person.getGender() == 'Male'}">Hello, Mr. <fname th:text="${person.getFullname()}">.</fname></gender>
+        <gender th:if="${person.getGender() == 'Female'}">Hello, Mrs. <fname th:text="${person.getFullname()}">.</fname></gender>
+        <email th:text="${person.getEmail()}"></email>
+        <city th:text="${person.getCity()}"></city>
+    </person>
+</persons>
